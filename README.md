@@ -1,5 +1,5 @@
-#### 📦 文档
-<a href="https://lakei-edward.github.io/luckyui.github.io/">文档地址</a>
+#### 📃 参考文档
+<a href="https://lakei-edward.github.io/luckyui.github.io/">vue-luckyui中文文档地址</a>
 
 #### 📦 Install
 推荐使用 npm 的方式安装，它能更好地和 webpack 打包工具配合使用。
