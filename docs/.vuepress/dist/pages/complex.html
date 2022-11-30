@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>复杂示例 | 多功能SQL生成器</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="sql-translation.png">
+    <meta name="description" content="多功能SQL生成器，支持生成create、insert、update语句">
+    
+    <link rel="preload" href="/translate.github.io/assets/css/0.styles.85e2b846.css" as="style"><link rel="preload" href="/translate.github.io/assets/js/app.c03a3aa1.js" as="script"><link rel="preload" href="/translate.github.io/assets/js/2.0f35c2b4.js" as="script"><link rel="preload" href="/translate.github.io/assets/js/14.09f943a1.js" as="script"><link rel="prefetch" href="/translate.github.io/assets/js/10.c5d3ec96.js"><link rel="prefetch" href="/translate.github.io/assets/js/11.719a1100.js"><link rel="prefetch" href="/translate.github.io/assets/js/12.0cb29b1e.js"><link rel="prefetch" href="/translate.github.io/assets/js/13.f31caa27.js"><link rel="prefetch" href="/translate.github.io/assets/js/15.2a541b85.js"><link rel="prefetch" href="/translate.github.io/assets/js/3.633bb074.js"><link rel="prefetch" href="/translate.github.io/assets/js/4.c73b38e7.js"><link rel="prefetch" href="/translate.github.io/assets/js/5.5cba7e00.js"><link rel="prefetch" href="/translate.github.io/assets/js/6.e428d81e.js"><link rel="prefetch" href="/translate.github.io/assets/js/7.9a10ca49.js"><link rel="prefetch" href="/translate.github.io/assets/js/8.5a36ce90.js"><link rel="prefetch" href="/translate.github.io/assets/js/9.ba413a39.js">
+    <link rel="stylesheet" href="/translate.github.io/assets/css/0.styles.85e2b846.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/translate.github.io/" class="home-link router-link-active"><img src="/translate.github.io/sql-translation.png" alt="多功能SQL生成器" class="logo"> <span class="site-name can-hide">多功能SQL生成器</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/translate.github.io/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/translate.github.io/pages/" class="nav-link router-link-active">
+  快速入门
+</a></div><div class="nav-item"><a href="/translate.github.io/core/" class="nav-link">
+  项目
+</a></div><div class="nav-item"><a href="https://support.qq.com/products/435498" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  💖意见反馈
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/pdxjie/sql-translate" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  🌏GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="http://www.json-sql.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线访问
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/translate.github.io/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/translate.github.io/pages/" class="nav-link router-link-active">
+  快速入门
+</a></div><div class="nav-item"><a href="/translate.github.io/core/" class="nav-link">
+  项目
+</a></div><div class="nav-item"><a href="https://support.qq.com/products/435498" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  💖意见反馈
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/pdxjie/sql-translate" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  🌏GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="http://www.json-sql.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  在线访问
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>快速入门</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/translate.github.io/pages/" aria-current="page" class="sidebar-link">简介</a></li><li><a href="/translate.github.io/pages/background.html" class="sidebar-link">了解本站</a></li><li><a href="/translate.github.io/pages/brief.html" class="sidebar-link">快速开始</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>核心功能</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/translate.github.io/pages/grammar.html" class="sidebar-link">操作语法</a></li><li><a href="/translate.github.io/pages/replace.html" class="sidebar-link">替换属性</a></li><li><a href="/translate.github.io/pages/complex.html" aria-current="page" class="active sidebar-link">复杂示例</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>留言</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/translate.github.io/pages/talk.html" class="sidebar-link">作者留言</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="复杂示例"><a href="#复杂示例" class="header-anchor">#</a> 复杂示例</h1> <div class="custom-block tip"><p class="custom-block-title">前言</p> <p>前面大致介绍了适配本工具所支持的三种操作模式的一些简单示例，接下来，隆重介绍一下<a href="https://github.com/pdxjie/sql-translate" target="_blank" rel="noopener noreferrer">ST<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 在插入操作模式中所支持的一些复杂的操作示例</p></div> <p>首先抛出两个复杂的示例：<br></p> <ol><li>示例1 (超级多个对象)：</li></ol> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span><span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;username&quot;</span><span class="token operator">:</span><span class="token string">&quot;法外狂徒张三&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;password&quot;</span><span class="token operator">:</span><span class="token string">&quot;123456&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;gender&quot;</span><span class="token operator">:</span><span class="token string">&quot;未知&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span><span class="token string">&quot;2&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;username&quot;</span><span class="token operator">:</span><span class="token string">&quot;这是王五&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;password&quot;</span><span class="token operator">:</span><span class="token string">&quot;123456&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;gender&quot;</span><span class="token operator">:</span><span class="token string">&quot;未知&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    ...
+<span class="token punctuation">]</span>
+</code></pre></div><ol start="2"><li>示例2 (超级多个对象，对象中包含超级多层嵌套关系)</li></ol> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;320500000&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;text&quot;</span><span class="token operator">:</span> <span class="token string">&quot;苏州工业园区&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;320500000&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>         
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;320505006&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;text&quot;</span><span class="token operator">:</span> <span class="token string">&quot;斜塘街道&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;320505006&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    ...
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;320505000&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;text&quot;</span><span class="token operator">:</span> <span class="token string">&quot;虎丘区&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;320505000&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>         
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;320505002&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;text&quot;</span><span class="token operator">:</span> <span class="token string">&quot;狮山街道&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;320505002&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    ...
+<span class="token punctuation">]</span>
+</code></pre></div><p>对于上述两种示例，我们又该如何解决呢？难道单个拿出来再生成一个个的SQL语句，那么该工具的出现可以说是是毫无用处。
+那么使用本工具如何处理上述出现的两种情况呢？ 那么对于上述两种情况，四个字：<span style="color:red;font-weight:700;"><strong>“直接粘贴”</strong></span>，然后选择插入操作即可转译生成可执行的SQL语句，如果属性不一致时也可支持属性替换的功能，当时遇到这种情况也是要按照一定的<span style="color:red;font-weight:700;">内置语法</span>方可执行成功。</p> <div class="custom-block tip"><p class="custom-block-title">语法介绍</p> <p>复杂示例的语法归纳，且往下看！</p></div> <p>如果遇到上述的两种示例情况，我们在粘贴的同时需要在<code>JSON</code>数组的<span style="color:red;font-weight:700;">尾部</span>另加一个<code>JSON</code>对象，<strong>用来存储表名和存在嵌套关系的pid</strong>！具体执行如下：</p> <ul><li>对象中不存在嵌套关系</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span><span class="token string">&quot;1&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;username&quot;</span><span class="token operator">:</span><span class="token string">&quot;法外狂徒张三&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;password&quot;</span><span class="token operator">:</span><span class="token string">&quot;123456&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;gender&quot;</span><span class="token operator">:</span><span class="token string">&quot;未知&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    ....<span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">&quot;@table&quot;</span><span class="token operator">:</span><span class="token string">&quot;[自定义表名]&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div><ul><li>对象中存在嵌套关系</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;320500000&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;text&quot;</span><span class="token operator">:</span> <span class="token string">&quot;苏州工业园区&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;320500000&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>         
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;320505006&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;text&quot;</span><span class="token operator">:</span> <span class="token string">&quot;斜塘街道&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;320505006&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;children&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    ...
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    ....<span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">&quot;@table&quot;</span><span class="token operator">:</span><span class="token string">&quot;[自定义表名]&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;@pid&quot;</span><span class="token operator">:</span><span class="token string">&quot;[用来作为pid的字段列]&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/translate.github.io/pages/replace.html" class="prev">
+        替换属性
+      </a></span> <span class="next"><a href="/translate.github.io/pages/talk.html">
+        作者留言
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/translate.github.io/assets/js/app.c03a3aa1.js" defer></script><script src="/translate.github.io/assets/js/2.0f35c2b4.js" defer></script><script src="/translate.github.io/assets/js/14.09f943a1.js" defer></script>
+  </body>
+</html>

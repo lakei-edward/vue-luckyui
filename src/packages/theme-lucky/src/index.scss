@@ -1,0 +1,21 @@
+@import "./common/var.scss";
+@import "./button.scss";
+@import "./buttongroup.scss";
+@import "./contextmenu.scss";
+@import "./divider.scss";
+@import "./popupMenu.scss";
+body,
+ul,
+li,
+a,
+img,
+p,
+input {
+	margin: 0;
+	padding: 0;
+}
+ul,
+ol,
+li {
+	list-style: none;
+}

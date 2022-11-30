@@ -1,0 +1,41 @@
+.lkPopupmenu {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: inline-block;
+	z-index: 12;
+	ul {
+		padding: 6px 8px;
+		color: $--color-text-1;
+		border-radius: 16px;
+		background: $--color-white;
+		box-shadow: $--box-shadow;
+		li {
+			cursor: pointer;
+			min-width: 146px;
+			border-radius: 5px;
+			padding: 12px 16px;
+			&:hover {
+				background: $--color-primary;
+				color: $--color-white;
+			}
+		}
+	}
+}
+.lkPopupmenu--icon {
+	background: $--color-danger;
+	padding: 1px 10px;
+	border-radius: 15px;
+	margin: 0 5px;
+	font-size: 12px;
+	color: $--color-white;
+}
+.lkPopupmenu--dot {
+	background: $--color-danger;
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	margin: 0 5px;
+	vertical-align: top;
+	border-radius: 5px;
+}
