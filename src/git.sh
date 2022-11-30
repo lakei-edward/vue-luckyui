@@ -16,4 +16,4 @@ git remote add Gitee https://gitee.com/lakeiedward/luckyui-vue.git
 git push GitHub master
 git push Gitee master
 
-echo '上传成功2'
+echo '上传成功'
