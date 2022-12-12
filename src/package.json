@@ -11,7 +11,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lib": "vue-cli-service build --target lib src/index.js",
+    "lib": "npm run clean && vue-cli-service build --target lib --dest lib --entry ./src/index.js",
     "clean": "rimraf lib",
     "common": "webpack --config build/webpack.common.js",
     "build:theme": "cd build && gulp sass",
