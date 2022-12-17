@@ -1,0 +1,33 @@
+.lk-cntextmenu {
+	transition: all 0.2s;
+	position: fixed;
+	width: 240px;
+	cursor: default;
+	background: $--color-white;
+	// border: 1px solid mix($--color-white, $--color-black, 85%);
+	font-size: 13px;
+	padding: 5px 0;
+	border-radius: 8px;
+	// box-shadow: mix($--color-white, $--color-black, 70%) 1px 1px 1px;
+	box-shadow: $--box-shadow;
+	z-index: 999;
+	& > div {
+		padding: 5px 30px;
+		margin: 1px 0;
+	}
+	& > div:hover {
+		background: var(--backgroynd-color);
+	}
+}
+
+.lk-cntextmenu-disabled {
+	transition: all 0.2s;
+	position: fixed;
+	background: $--color-black;
+	color: $--color-white;
+	opacity: 0.8;
+	font-size: 13px;
+	padding: 5px 30px;
+	border-radius: 3px;
+	z-index: 999;
+}
