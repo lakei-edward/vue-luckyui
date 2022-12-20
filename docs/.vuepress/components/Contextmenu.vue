@@ -10,7 +10,7 @@
         {{ item.label }}
       </li>
     </ul>
-    <lk-contextmenu :visible.sync="visibility" :ctxmenu="menuInfo">
+    <!-- <lk-contextmenu :visible.sync="visibility" :ctxmenu="menuInfo">
       <template v-slot="scope">
         <div @click="insert(scope.info)">😀 新增</div>
         <div @click="remove(scope.info)">😳 删除</div>
@@ -19,7 +19,23 @@
         <div @click="print">😋 打印</div>
         <div @click="refresh">🤣 重新加载</div>
       </template>
-    </lk-contextmenu>
+    </lk-contextmenu> -->
+
+    <component
+      v-if="lkContextmenu"
+      :is="lkContextmenu"
+      :visible.sync="visibility"
+      :ctxmenu="menuInfo"
+    >
+      <template v-slot="scope">
+        <div @click="insert(scope.info)">😀 新增</div>
+        <div @click="remove(scope.info)">😳 删除</div>
+        <component v-if="lkDivider" :is="lkDivider" :space="10"> </component>
+        <div @click="back">😏 后退一步</div>
+        <div @click="print">😋 打印</div>
+        <div @click="refresh">🤣 重新加载</div>
+      </template>
+    </component>
   </div>
 </template>
 <script>
@@ -39,7 +55,15 @@ export default {
         context: null,
       },
       visibility: false,
+      lkContextmenu: null,
+      lkDivider: null,
     };
+  },
+  mounted() {
+    import("vue-luckyui").then((res) => {
+      this.lkContextmenu = res.default.Contextmenu;
+      this.lkDivider = res.default.Divider;
+    });
   },
   methods: {
     back() {

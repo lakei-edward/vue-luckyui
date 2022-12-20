@@ -15,7 +15,7 @@
 
 <br />
 
-<download></download>
+  <download></download>
 
 #### 代码
 
@@ -62,7 +62,8 @@ export default {
 
 <br />
 
-<download :sharpness="2"></download>
+
+  <download :sharpness="2"></download>
 
 ```js
 const container = document.getElementsByClassName("content__default")[0];
@@ -74,7 +75,7 @@ this.$downLoadImage(container, "Download页面");
 
 <br />
 
-<download :sharpness="5" ></download>
+  <download :sharpness="5" ></download>
 
 ```js
 const container = document.getElementsByClassName("content__default")[0];

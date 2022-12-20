@@ -34,7 +34,7 @@
       <template v-slot="scope">
         <div @click="insert(scope.info)">😀 新增</div>
         <div @click="remove(scope.info)">😳 删除</div>
-        <lk-divider></lk-divider>
+        <lk-divider :space="10"></lk-divider>
         <div @click="back">😏 后退一步</div>
         <div @click="print">😋 打印</div>
         <div @click="refresh">🤣 重新加载</div>

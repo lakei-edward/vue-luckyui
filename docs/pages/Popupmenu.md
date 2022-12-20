@@ -49,11 +49,11 @@ export default {
       data: [],
       popupmenuData: [
         [
-          { label: "Github⭐",link:"http://43.142.176.173/lakeiedward/", id: 4, icon: "Star" },
+          { label: "Github⭐",link:"https://github.com/lakei-edward", id: 4, icon: "Star" },
           { label: "线上活动", id: 2, dot: true },
           { label: "设计大赛", id: 0, icon: "Hot" },
           { label: "专题策划", id: 1 },
-          { label: "个人博客", link:"https://github.com/lakei-edward",id: 3, icon: "New" },
+          { label: "个人博客", link:"http://43.142.176.173/lakeiedward/",id: 3, icon: "New" },
         ],
         [
           { label: "精彩案例", id: 0, icon: "Hot" },

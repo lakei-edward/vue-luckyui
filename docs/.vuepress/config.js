@@ -7,7 +7,7 @@ module.exports = {
         ]
     ],
     title: 'vue-luckyui',
-    description: 'vue-luckyui，支持生成create、insert、update语句',
+    description: 'vue-luckyui，让我们打开不一样的UI组件库吧',
     themeConfig: {
         logo: '/lucky-logo.png',
         nav: [

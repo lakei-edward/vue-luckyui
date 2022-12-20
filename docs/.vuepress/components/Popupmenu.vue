@@ -1,7 +1,10 @@
 <template>
   <div>
     <div>
-      <lkButton @click="handleClick(0, $event)"> - click me - </lkButton>
+      <!-- <lkButton @click="handleClick(0, $event)"> - click me - </lkButton> -->
+      <component v-if="lkButton" :is="lkButton" @click="handleClick(0, $event)">
+        - click me -
+      </component>
     </div>
 
     <br />
@@ -11,15 +14,28 @@
     </div>
     <br />
     <div>
-      <lkButton @click="handleClick(1, $event)"> - click me - </lkButton>
+      <!-- <lkButton @click="handleClick(1, $event)"> - click me - </lkButton> -->
+      <component v-if="lkButton" :is="lkButton" @click="handleClick(1, $event)">
+        - click me -
+      </component>
     </div>
-    <lk-popupmenu
+    <!-- <lk-popupmenu
       :visible.sync="visibility"
       :target="target"
       :data="data"
       :coord="coord"
       @click="popupmenuClick"
-    ></lk-popupmenu>
+    ></lk-popupmenu> -->
+    <component
+      v-if="lkPopupmenu"
+      :is="lkPopupmenu"
+      :visible.sync="visibility"
+      :target="target"
+      :data="data"
+      :coord="coord"
+      @click="popupmenuClick"
+    >
+    </component>
   </div>
 </template>
 <script>
@@ -37,7 +53,7 @@ export default {
         [
           {
             label: "Github⭐",
-            link: "http://43.142.176.173/lakeiedward/",
+            link: "https://github.com/lakei-edward",
             id: 4,
             icon: "Star",
           },
@@ -46,7 +62,7 @@ export default {
           { label: "专题策划", id: 1 },
           {
             label: "个人博客",
-            link: "https://github.com/lakei-edward",
+            link: "http://43.142.176.173/lakeiedward/",
             id: 3,
             icon: "New",
           },
@@ -57,7 +73,15 @@ export default {
           { label: "我要共创", id: 2, dot: true },
         ],
       ],
+      lkButton: null,
+      lkPopupmenu: null,
     };
+  },
+  mounted() {
+    import("vue-luckyui").then((res) => {
+      this.lkButton = res.default.Button;
+      this.lkPopupmenu = res.default.popupMenu;
+    });
   },
   methods: {
     handleClick(index, e) {
@@ -67,8 +91,8 @@ export default {
       this.coord.y = e.pageY;
       if (index) {
         this.target = e.target;
-      }else{
-        this.target =null
+      } else {
+        this.target = null;
       }
     },
     // 点击事件
