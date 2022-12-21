@@ -1,5 +1,6 @@
 module.exports = {
-    base:'/luckyui.github.io/',
+    // base:'/luckyui.github.io/',
+    base: "/vue-luckyui/",//部署之后访问得路径
     head: [
         [
             'link', // 设置 favicon.ico，注意图片放在 public 文件夹下

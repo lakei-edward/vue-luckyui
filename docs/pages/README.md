@@ -7,19 +7,16 @@ permalink: /luckyui/home/
 article: false
 ---
 
-#### 📦 npm 安装
-
-推荐使用 npm 的方式安装，它能更好地和 webpack 打包工具配合使用。
+#### 📦 下载
 
 ```sh
 $ npm install vue-luckyui -S
-        #或者
+#或者
 $ pnpm install vue-luckyui -S
 ```
 
-#### 🔨 快速上手
-<br />
-完整引入
+#### 🔨 使用
+
 在 main.js 中写入以下内容：
 
 ```js
@@ -37,12 +34,12 @@ new Vue({
 ```
 
 #### 🎨 按需引入
-<br />
+
 如果你只希望引入部分组件，比如 Button 和 Contextmenu，那么需要在 main.js 中写入以下内容：
 
 ```js
 import Vue from 'vue';
-import { Button,Contextmenu } from '../lib/vue-luckyui.common';
+import { Button,Contextmenu } from 'vue-luckyui';
 
 Vue.component(Button.name, Button)
 Vue.component(Contextmenu.name, Contextmenu)
@@ -57,4 +54,3 @@ new Vue({
   render: h => h(App)
 });
 ```
-

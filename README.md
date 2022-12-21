@@ -1,14 +1,15 @@
 #### 📃 参考文档
-<a href="https://lakei-edward.github.io/luckyui.github.io/">vue-luckyui中文文档地址</a>
+<a href="http://43.142.176.173/vue-luckyui/" target="_blank">vue-luckyui中文文档地址</a>
 
-#### 📦 Install
-推荐使用 npm 的方式安装，它能更好地和 webpack 打包工具配合使用。
+#### 📦 下载
 
 ```sh
-$ npm install vue-luckyui
+$ npm install vue-luckyui -S
+#或者
+$ pnpm install vue-luckyui -S
 ```
-#### 🔨 Usage
-**完整引入**
+
+#### 🔨 使用
 
 在 main.js 中写入以下内容：
 
@@ -26,13 +27,13 @@ new Vue({
 });
 ```
 
-#### 🎨按需引入
+#### 🎨 按需引入
 
 如果你只希望引入部分组件，比如 Button 和 Contextmenu，那么需要在 main.js 中写入以下内容：
 
 ```js
 import Vue from 'vue';
-import { Button,Contextmenu } from '../lib/vue-luckyui.common';
+import { Button,Contextmenu } from 'vue-luckyui';
 
 Vue.component(Button.name, Button)
 Vue.component(Contextmenu.name, Contextmenu)
