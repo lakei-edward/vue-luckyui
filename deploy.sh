@@ -18,7 +18,5 @@ git commit -m 'update 优化文档'
 # 如果发布到 https://<USERNAME>.github.io
 git push -f https://github.com/lakei-edward/luckyui.github.io.git master
 
-# 如果发布到 https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
-
-rimraf dist
+# 上传至服务器
+scp -r * root@43.142.176.173:/usr/local/nginx/html/vue-luckyui/
