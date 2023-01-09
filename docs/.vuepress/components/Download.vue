@@ -113,7 +113,7 @@ export default {
   margin-top: 30px;
   width: 200px;
   display: flex;
-  padding: 30px;
+  padding: 20px;
   flex-direction: column;
   align-items: center;
   border: 1px solid #ccc;
@@ -128,7 +128,7 @@ export default {
 }
 .code_dis {
   text-align: center;
-  margin: 30px 20px 20px 20px;
+  margin: 15px;
 }
 .download {
   padding: 30px;

@@ -1,7 +1,6 @@
 <template>
   <div>
     <div>
-      <!-- <lkButton @click="handleClick(0, $event)"> - click me - </lkButton> -->
       <component v-if="lkButton" :is="lkButton" @click="handleClick(0, $event)">
         - click me -
       </component>
@@ -14,18 +13,10 @@
     </div>
     <br />
     <div>
-      <!-- <lkButton @click="handleClick(1, $event)"> - click me - </lkButton> -->
       <component v-if="lkButton" :is="lkButton" @click="handleClick(1, $event)">
         - click me -
       </component>
     </div>
-    <!-- <lk-popupmenu
-      :visible.sync="visibility"
-      :target="target"
-      :data="data"
-      :coord="coord"
-      @click="popupmenuClick"
-    ></lk-popupmenu> -->
     <component
       v-if="lkPopupmenu"
       :is="lkPopupmenu"
@@ -85,6 +76,7 @@ export default {
   },
   methods: {
     handleClick(index, e) {
+      console.log(e.target);
       this.data = this.popupmenuData[index];
       this.visibility = true;
       this.coord.x = e.pageX;

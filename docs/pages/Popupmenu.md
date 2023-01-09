@@ -70,9 +70,6 @@ export default {
       this.coord.y = e.pageY;
       this.target = e.target;
       this.data = this.popupmenuData[index];
-      if (index) {
-        this.target = e.target;
-      }
     },
     // 点击事件
     popupmenuClick(val) {

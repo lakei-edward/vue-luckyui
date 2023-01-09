@@ -70,7 +70,7 @@
 
 ```js
 <lk-button type="text"> 默认按钮 </lk-button>
-<lk-button  disabled> 默认按钮 </lk-button>
+<lk-button type="text" disabled> 默认按钮 </lk-button>
 ```
 
 ### 禁用状态
@@ -83,7 +83,7 @@
 
 ```js
 <lk-button disabled> 默认按钮 </lk-button>
-<lk-button round disabled> 默认按钮 </lk-button>
+<lk-button disabled round > 默认按钮 </lk-button>
 ```
 
 ### Attributes

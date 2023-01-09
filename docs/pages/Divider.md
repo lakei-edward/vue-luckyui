@@ -7,14 +7,14 @@
   <span>青春是一个短暂的美梦, 当你醒来时, 它早已消失无踪</span>
   <lk-divider ></lk-divider>
   <span>少量的邪恶足以抵消全部高贵的品质, 害得人声名狼藉</span>
-  <lk-divider color="#7ea95b"></lk-divider>
+  <lk-divider color="#ff001245"></lk-divider>
 </div>
 
 ```js
 <span>青春是一个短暂的美梦, 当你醒来时, 它早已消失无踪</span>
 <lk-divider ></lk-divider>
 <span>少量的邪恶足以抵消全部高贵的品质, 害得人声名狼藉</span>
-<lk-divider color="#7ea95b"></lk-divider>
+<lk-divider color="#ff001245"></lk-divider>
 ```
 
 ### 垂直分割
