@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vuepress": "1.8.0"
+    "vuepress": "^1.9.7"
   },
   "dependencies": {
     "qrcodejs2": "^0.0.2",
