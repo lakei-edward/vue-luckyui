@@ -86,7 +86,7 @@ export default {
       this.DownLoadImage(container, "download页面", this.sharpness);
     },
 
-    qrcode(text = "https://lakei-edward.github.io/luckyui.github.io/") {
+    qrcode(text = "http://43.142.176.173/vue-luckyui/") {
       import("qrcodejs2").then((res) => {
         const QRCode = res.default;
         // 第二参数是他的配置项
