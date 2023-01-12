@@ -25,7 +25,7 @@
 <br />
 
 ```js
-<lk-disable-panel :contextmenu="contextmenu" :keydown="keydown"></lk-disable-panel>
+<lk-disable-panel :contextmenu="false" :keydown="true"></lk-disable-panel>
 ```
 
 ### Attributes
