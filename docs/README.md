@@ -15,4 +15,6 @@ features:
 ---
 ::: slot footer
 MIT Licensed | Copyright © 2022 [vue-luckyui](https://github.com/lakei-edward/vue-luckyui)
+
+<a href="https://beian.miit.gov.cn/" target="_blank">皖ICP备2023006581号-1</a>
 :::
