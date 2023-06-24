@@ -19,4 +19,4 @@ git commit -m 'update 优化文档'
 #git push -f https://github.com/lakei-edward/luckyui.github.io.git master
 
 # 上传至服务器
-scp -r * root@43.142.176.173:/usr/local/nginx/html/vue-luckyui/
+scp -r * root@43.142.176.173:/data/nginx/html/vue-luckyui/
